@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -38,6 +38,8 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+/*NAV STYLES*/
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -58,3 +60,21 @@ navAbout.textContent = siteContent["nav"]["nav-item-5"];
 
 const navContact = document.querySelector('a:nth-of-type(6)');
 navContact.textContent = siteContent["nav"]["nav-item-6"];
+
+/*HEADING STYLES*/
+const ctaText= document.querySelector('.cta-text h1');
+ctaText.style.fontFamily = 'Bangers'
+ctaText.innerHTML = siteContent["cta"]["h1"];
+
+const ctaButton = ctaText.nextElementSibling;
+console.log(ctaButton);
+ctaButton.textContent = siteContent["cta"]["button"];
+
+const codeSnippet = document.querySelector('#cta-img');
+codeSnippet.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+
+/*MAIN CONTENT STYLES*/
+const mainFeatures = document.querySelector('top-content text-content');
+
