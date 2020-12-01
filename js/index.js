@@ -67,7 +67,6 @@ ctaText.style.fontFamily = 'Bangers'
 ctaText.innerHTML = siteContent["cta"]["h1"];
 
 const ctaButton = ctaText.nextElementSibling;
-console.log(ctaButton);
 ctaButton.textContent = siteContent["cta"]["button"];
 
 const codeSnippet = document.querySelector('#cta-img');
@@ -76,5 +75,18 @@ codeSnippet.setAttribute('src', siteContent["cta"]["img-src"]);
 
 
 /*MAIN CONTENT STYLES*/
-const mainFeatures = document.querySelector('top-content text-content');
+const featuresHeading = document.querySelector('.text-content h4');
+featuresHeading.textContent = siteContent["main-content"]["features-h4"];
+
+const featuresParagraph = featuresHeading.nextElementSibling;
+featuresParagraph.textContent = siteContent["main-content"]["features-content"];
+
+const topContent = document.querySelector('.top-content')
+const aboutHeading = topContent.querySelector('.text-content:nth-of-type(2)')
+aboutHeading.textContent = siteContent["main-content"]["about-h4"];
+
+const aboutParagraph = topContent.querySelector('p:nth-of-type(2)')
+console.log(aboutParagraph)
+aboutParagraph.textContent = siteContent["main-content"]["about-content"];
+
 
