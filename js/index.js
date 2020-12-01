@@ -99,3 +99,19 @@ paragraphs[1].textContent = siteContent["main-content"]["about-content"];
 paragraphs[2].textContent = siteContent["main-content"]["services-content"];
 paragraphs[3].textContent = siteContent["main-content"]["product-content"];
 paragraphs[4].textContent = siteContent["main-content"]["vision-content"];
+
+/*FOOTER STYLES*/
+
+const contactHeader = document.querySelector('.contact h4');
+console.log(contactHeader);
+contactHeader.textContent = siteContent['contact']["contact-h4"];
+
+const addressLines = document.querySelectorAll('.contact p');
+console.log(addressLines);
+addressLines[0].textContent = siteContent['contact']['address'];
+addressLines[1].textContent = siteContent['contact']['phone'];
+addressLines[2].textContent = siteContent['contact']['email'];
+
+const copyright = document.querySelector('footer p');
+console.log(copyright);
+copyright.textContent = siteContent['footer']['copyright'];
