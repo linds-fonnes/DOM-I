@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -38,5 +38,102 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+/*NAV STYLES*/
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navServices = document.querySelector('a:nth-of-type(1)');
+navServices.textContent = siteContent["nav"]["nav-item-1"];
+
+const navProduct = document.querySelector('a:nth-of-type(2)');
+navProduct.textContent = siteContent["nav"]["nav-item-2"];
+
+const navVision = document.querySelector('a:nth-of-type(3)');
+navVision.textContent = siteContent["nav"]["nav-item-3"];
+
+const navFeatures = document.querySelector('a:nth-of-type(4)');
+navFeatures.textContent = siteContent["nav"]["nav-item-4"];
+
+const navAbout = document.querySelector('a:nth-of-type(5)');
+navAbout.textContent = siteContent["nav"]["nav-item-5"];
+
+const navContact = document.querySelector('a:nth-of-type(6)');
+navContact.textContent = siteContent["nav"]["nav-item-6"];
+
+/*HEADING STYLES*/
+const ctaText= document.querySelector('.cta-text h1');
+ctaText.style.fontFamily = 'Bangers'
+ctaText.innerHTML = siteContent["cta"]["h1"];
+
+const ctaButton = ctaText.nextElementSibling;
+ctaButton.textContent = siteContent["cta"]["button"];
+
+const codeSnippet = document.querySelector('#cta-img');
+codeSnippet.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+
+/*MAIN CONTENT STYLES*/
+
+//get querySelectorAll on all elements that are the same and then use index to specify the specific element to update with the informatioon 
+
+const headings = document.querySelectorAll('.text-content h4');
+console.log(headings);
+headings[0].textContent = siteContent["main-content"]["features-h4"];
+headings[1].textContent = siteContent["main-content"]["about-h4"];
+headings[2].textContent = siteContent["main-content"]["services-h4"];
+headings[3].textContent = siteContent["main-content"]["product-h4"];
+headings[4].textContent = siteContent["main-content"]["vision-h4"];
+
+
+const middleImage = document.querySelector('.middle-img');
+console.log(middleImage);
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+const paragraphs = document.querySelectorAll('.text-content p');
+console.log(paragraphs)
+paragraphs[0].textContent = siteContent["main-content"]["features-content"];
+paragraphs[1].textContent = siteContent["main-content"]["about-content"];
+paragraphs[2].textContent = siteContent["main-content"]["services-content"];
+paragraphs[3].textContent = siteContent["main-content"]["product-content"];
+paragraphs[4].textContent = siteContent["main-content"]["vision-content"];
+
+/*FOOTER STYLES*/
+
+const contactHeader = document.querySelector('.contact h4');
+console.log(contactHeader);
+contactHeader.textContent = siteContent['contact']["contact-h4"];
+
+const addressLines = document.querySelectorAll('.contact p');
+console.log(addressLines);
+addressLines[0].textContent = siteContent['contact']['address'];
+addressLines[1].textContent = siteContent['contact']['phone'];
+addressLines[2].textContent = siteContent['contact']['email'];
+
+const copyright = document.querySelector('footer p');
+console.log(copyright);
+copyright.textContent = siteContent['footer']['copyright'];
+
+/*ADD NEW CONTENT */
+navServices.style.color = 'green';
+navProduct.style.color = 'green';
+navVision.style.color = 'green';
+navFeatures.style.color = 'green';
+navAbout.style.color = 'green';
+navContact.style.color = 'green';
+
+
+const tech = document.createElement('a');
+tech.textContent = 'Tech';
+tech.href = '#';
+document.querySelector('nav').appendChild(tech);
+tech.style.color = 'green';
+
+const meetUp = document.createElement('a');
+meetUp.textContent = 'Meet Up';
+meetUp.href = '#';
+document.querySelector('nav').prepend(meetUp);
+meetUp.style.color = 'green';
+
