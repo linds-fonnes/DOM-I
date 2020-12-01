@@ -75,18 +75,27 @@ codeSnippet.setAttribute('src', siteContent["cta"]["img-src"]);
 
 
 /*MAIN CONTENT STYLES*/
-const featuresHeading = document.querySelector('.text-content h4');
-featuresHeading.textContent = siteContent["main-content"]["features-h4"];
 
-const featuresParagraph = featuresHeading.nextElementSibling;
-featuresParagraph.textContent = siteContent["main-content"]["features-content"];
+//get querySelectorAll on all elements that are the same and then use index to specify the specific element to update with the informatioon 
 
-const topContent = document.querySelector('.top-content')
-const aboutHeading = topContent.querySelector('.text-content:nth-of-type(2)')
-aboutHeading.textContent = siteContent["main-content"]["about-h4"];
-
-const aboutParagraph = topContent.querySelector('p:nth-of-type(2)')
-console.log(aboutParagraph)
-aboutParagraph.textContent = siteContent["main-content"]["about-content"];
+const headings = document.querySelectorAll('.text-content h4');
+console.log(headings);
+headings[0].textContent = siteContent["main-content"]["features-h4"];
+headings[1].textContent = siteContent["main-content"]["about-h4"];
+headings[2].textContent = siteContent["main-content"]["services-h4"];
+headings[3].textContent = siteContent["main-content"]["product-h4"];
+headings[4].textContent = siteContent["main-content"]["vision-h4"];
 
 
+const middleImage = document.querySelector('.middle-img');
+console.log(middleImage);
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+const paragraphs = document.querySelectorAll('.text-content p');
+console.log(paragraphs)
+paragraphs[0].textContent = siteContent["main-content"]["features-content"];
+paragraphs[1].textContent = siteContent["main-content"]["about-content"];
+paragraphs[2].textContent = siteContent["main-content"]["services-content"];
+paragraphs[3].textContent = siteContent["main-content"]["product-content"];
+paragraphs[4].textContent = siteContent["main-content"]["vision-content"];
