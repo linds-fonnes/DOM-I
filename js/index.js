@@ -115,3 +115,25 @@ addressLines[2].textContent = siteContent['contact']['email'];
 const copyright = document.querySelector('footer p');
 console.log(copyright);
 copyright.textContent = siteContent['footer']['copyright'];
+
+/*ADD NEW CONTENT */
+navServices.style.color = 'green';
+navProduct.style.color = 'green';
+navVision.style.color = 'green';
+navFeatures.style.color = 'green';
+navAbout.style.color = 'green';
+navContact.style.color = 'green';
+
+
+const tech = document.createElement('a');
+tech.textContent = 'Tech';
+tech.href = '#';
+document.querySelector('nav').appendChild(tech);
+tech.style.color = 'green';
+
+const meetUp = document.createElement('a');
+meetUp.textContent = 'Meet Up';
+meetUp.href = '#';
+document.querySelector('nav').prepend(meetUp);
+meetUp.style.color = 'green';
+
